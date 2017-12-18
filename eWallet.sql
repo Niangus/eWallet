@@ -1,0 +1,53 @@
+CREATE TABLE `ew_appliant` (
+ `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `firstname` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `lastname` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `birthdate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `creation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `creation_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `creation_content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+ `sexe` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ `job` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ `appliant_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'publish',
+ `address` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `city` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `country` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `cell_phone` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `phone` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `post_code` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ `email` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ PRIMARY KEY (`ID`))
+ 
+ CREATE TABLE `ew_application` (
+ `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `application_note` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `creation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `creation_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `application_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `applicationn_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+ `amount` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ `status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'publish',
+ `address` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `city` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `country` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `application_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `methode` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `device` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ PRIMARY KEY (`ID`))
+ 
+  CREATE TABLE `ew_credit` (
+ `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `allocation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `allocation_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+ `application_amount` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ `credit_amount` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ `status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'publish',
+ `allocation_manager` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `allocation_condition` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `allocation_note` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `allocation_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `methode` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+ `allocation_warning` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ PRIMARY KEY (`ID`))
+ 
